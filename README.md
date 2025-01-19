@@ -2,8 +2,21 @@
 
 - Create React App
 - Configure TailwindCSS
+- Routing of app
 - Header
 - Login Form
+- Form Validation
+- Use-Ref Hook 
+- FireBase Setup
+- Deploy app to production
+- Create SingUp User Account
+- Implement Sign In user Api
+- Created Redux Store with UserSlice
+- IMplemented Sign Out
+- Update Profile
+- Fetch from TMDB Movies
+
+
 
 # Features
 - Login/Sign Page
