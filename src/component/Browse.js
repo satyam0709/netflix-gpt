@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Header'
 
-function Browse() {
+function Browse() { 
   return (
     <div>
       <Header/>

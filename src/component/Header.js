@@ -1,21 +1,42 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import {auth} from '../utils/firebase';
-import { signOut } from 'firebase/auth';
+import { onAuthStateChanged , signOut } from 'firebase/auth';
 import { useSelector } from 'react-redux';
+import { addUser , removeUser } from '../utils/userSlice';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+
 
 const Header = () => {
 
 const navigate = useNavigate();
+const dispatch = useDispatch();
+
 const user = useSelector((store)=> store.user);
  
   const handleSignOut = () =>{
   signOut(auth).then(() => {
-    navigate("/");
   }).catch((error) => {
-    // An error happened.
+    // An error happened. 
   });
   };
+
+  useEffect(() => {
+    onAuthStateChanged(auth , (user) => {
+      if (user) {
+      const {uid , email , displayName , photoURL} = user;
+      const profilePhoto =
+      photoURL || 'https://avatars.githubusercontent.com/u/115513910?v=4';
+    dispatch(addUser({ uid, email, displayName, photoURL: profilePhoto }));
+      navigate('/browse');
+      }
+      else {
+      dispatch(removeUser());
+      navigate('/');
+    }
+    });
+  },[])
 
   return (
     <div className='absolute px-24 w-full py-2 bg-gradient-to-b from-black z-10'>

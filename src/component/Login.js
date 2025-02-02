@@ -4,8 +4,7 @@ import { useState  , useRef} from 'react'
 import {isValid} from '../utils/IsValid'
 import {createUserWithEmailAndPassword , signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from '../utils/firebase';
-import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+ import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 
 const Login = () => {
@@ -13,8 +12,7 @@ const Login = () => {
   const[isSignIn , setIsSignIn] = useState(true);
   const[errorMessage , setErrorMessage] = useState(null);
 
-  const Navigate = useNavigate();
-  const dispatch = useDispatch();
+   const dispatch = useDispatch();
 
   const INemail = useRef(null);
   const UPemail = useRef(null);
@@ -51,8 +49,7 @@ const handleButtonClick = () => {
  
     const {uid , email , displayName , photoURL} = auth.currentUser;
     dispatch(addUser({uid: uid , email: email , displayName: displayName , photoURL: photoURL}));
-      Navigate(`/browse`);
-
+ 
     }).catch((error) => {
       setErrorMessage(error.message);
     });
@@ -73,8 +70,7 @@ else{
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
-    console.log(user);
-    Navigate(`/browse`);
+ 
     // ...
   })
   .catch((error) => {
