@@ -80,8 +80,6 @@ else{
   });
 }
 };
-
-
   const ToggleSignIn = ()=>{
     setIsSignIn(!isSignIn);
   };  

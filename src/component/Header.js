@@ -7,7 +7,6 @@ import { addUser , removeUser } from '../utils/userSlice';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
-
 const Header = () => {
 
 const navigate = useNavigate();
