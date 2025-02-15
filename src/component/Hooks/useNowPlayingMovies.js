@@ -8,13 +8,11 @@ const useNowPlayingMovies = (movieId) => {
     const getNowPlayingMovies = async () =>{
       const data = await fetch('https://api.themoviedb.org/3/movie/now_playing?page=1',API_OPTIONS);
       const json = await data.json();
-      // console.log(json.results);
-      dispatch(addNowPlayingMovies(json.results));
+       dispatch(addNowPlayingMovies(json.results));
     };
-    //  using useEffect to call the getNowPlayingMovies function only once.
-    useEffect(() => {
+     useEffect(() => {
       getNowPlayingMovies();
-    }, []) 
+    }, [])  
 };
 
 export default useNowPlayingMovies;

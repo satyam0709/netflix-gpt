@@ -24,11 +24,17 @@
 - Custom Hook for Now Playing Movies
 - Create movieSlice
 - Update Store with movies Data
-- Done the 1st conatiner and get ready 2nd one
+- Done the 1st container and get ready 2nd one
 - Fetch Data for Trailer Video
 - Update Store with Trailer Video Data
 - Embedded the Youtube video
 - Tailwind use for the make container more good
+- Complete the NowPlayingMovies and get all the Movies
+- make secondary container good
+- add the all movies lists
+- make the Trending Movies
+- make the Popular Movies
+- make the Top Rated Movies
 
 # Features
 - Login/Sign Page
