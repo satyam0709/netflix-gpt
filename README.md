@@ -35,6 +35,9 @@
 - make the Trending Movies
 - make the Popular Movies
 - make the Top Rated Movies
+- make GPT search page
+- make GPT search bar
+- make multi language search bar for GPT
 
 # Features
 - Login/Sign Page
