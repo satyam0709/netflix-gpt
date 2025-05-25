@@ -85,6 +85,3 @@ Open a Pull Request!
 - NetflixGpt
     - Search Bar
     - Movie Suggestions
- 
-📄 License
-This project is licensed under the MIT License
